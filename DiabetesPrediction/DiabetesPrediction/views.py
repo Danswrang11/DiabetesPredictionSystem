@@ -7,7 +7,7 @@ def home(request):
 def predict(request):
     return render(request, 'predict.html')
 def result(request):
-    data = pd.read_csv(r"D:\DiabetesPrediction1\DIABETES_DATASET.csv")
+    data = pd.read_csv(r"C:\Users\Asus\PycharmProjects\Diabetes Prediction\diabetes.csv")
     X = data.drop("Outcome", axis=1)
     Y = data['Outcome']
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
